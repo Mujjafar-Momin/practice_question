@@ -1,4 +1,47 @@
 /*
+
+//Find prime numbers from 1 ....n 
+
+
+
+// Code to find even numbers in a list
+void main(){ 
+  
+  List<int> num=[2,3,5,6,78,97,67,53,44,56,2];
+  List<int>even=[];
+  List<int>odd=[];
+
+  for(int i in num){
+    
+    if(i%2==0){
+      even.add(i);
+    }else{
+      odd.add(i);
+    }
+  } 
+  print("Even numbers: ${even.toString()}");
+  print("Odd numbers: ${odd.toString()}");
+}
+ 
+//fibonacci series with recursion
+void main(){ 
+  
+  int num=4;
+  
+  for (int i=0;i<num;i++){
+   print (fibonacci(i).toString());
+  }
+ 
+}
+ int fibonacci(int n){
+    if (n==0){
+      return 0;
+    }else if(n==1){
+      return 1;
+    }else{
+      return fibonacci(n-1)+fibonacci(n-2);
+    }
+  }
 //reverse number
 void main (){
   int num=12345;
