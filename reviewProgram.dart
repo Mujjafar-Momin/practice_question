@@ -1,5 +1,33 @@
 /*
 
+
+//async and async*
+ void main()async {
+
+  int result=await doSomeLongTask();
+  print(result.toString());
+  
+  await for (int i in doSomeLongTaskWithStream() ){
+    print(i);
+  }
+  
+}
+
+Future<int> doSomeLongTask()async{
+  
+  await Future.delayed(const Duration(seconds:1));
+  return 42;
+}
+
+Stream<int> doSomeLongTaskWithStream()async*{
+  
+  for (int i=0;i<10;i++){
+      await Future.delayed(const Duration(milliseconds:100));
+    yield i;
+  }
+}
+
+
 //Find prime numbers from 1 ....n 
 
 
