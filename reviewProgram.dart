@@ -1,6 +1,28 @@
 /*
 
+//prime number upto range 
 
+void main() {
+  int num = 50;
+  var prime = [];
+  for (int i = 2; i <= num; i++) {
+  isPrime(i);}
+}
+
+void isPrime(int n) {
+  bool flag = false;
+  for (int i = 2; i <= n / 2; ++i) {
+    if (n % i == 0) {
+      flag = true;
+      break;
+    }
+  }
+  
+  if (!flag) {
+    print("prime $n");
+  } 
+ 
+}
 //async and async*
  void main()async {
 
