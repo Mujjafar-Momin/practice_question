@@ -176,6 +176,22 @@ void main() {
   print(str!);
 }
 
+void main() {
+  List array = [1, 2, 3, 2, 4, 5, 6];
+
+  List temp = [];
+  for (var i = 0; i < array.length; i++) {
+    if (temp.isEmpty) {
+      temp.add(array[0]);
+    } else {
+      if (!temp.contains(array[i])) {
+        temp.add(array[i]);
+      }
+    }
+  }
+
+  print('output $temp');
+}
 */
 
 import 'dart:io';
