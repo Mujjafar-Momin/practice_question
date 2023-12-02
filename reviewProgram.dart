@@ -192,6 +192,103 @@ void main() {
 
   print('output $temp');
 }
+
+
+import 'dart:math' as math; 
+
+void main(){
+  int num=7;
+  
+ bool isPrime(int n) {  
+       if (n <= 1) {  
+           return false;  
+       }  
+       for (int i = 2; i < math.sqrt(n); i++) {  
+           if (n % i == 0) {  
+               return false;  
+           }  
+       }  
+       return true;  
+   }  
+  
+  print(isPrime(num));
+  
+  int input =4;
+  int range =3;
+  int start =2;
+  int count=0;
+  
+  List<int> primes=[];
+  
+  while(range>0){
+    if(isPrime(start)){
+      print(start);
+      start++;
+      count++;
+      if(count==input){
+        range=0;
+        break;
+      }
+    }
+  }
+}
+
+/*void main(){
+  List<String> array=['ksd','sk','addf','bcdf','zxcv'];
+  
+  array.sort((a,b)=>b.toLowerCase().compareTo(a.toLowerCase()));
+  
+  print(array);
+}*/
+/*
+void main() {
+  String str = 'Mujjafar';
+
+  var list = str.toLowerCase().split('');
+  Map<String, int> map = {};
+
+  for (var i = 0; i < list.length; i++) {
+    int count = map[str[i]] ?? 0;
+    map[str[i]] = count + 1;
+  }
+   print('count ${map}');
+}
+*/
+
+//remove duplicates
+void main(){
+  String str='Mujjafar';
+  String temp='';
+  for(var i=0;i<str.length-1;i++){
+    if(str[i]==str[i+1]){
+      break;
+    }else{
+      temp+=str[i];
+    }
+  }
+}
+  
+class Solution {
+  List<int> twoSum(List<int> nums, int target) {
+    List<int>temp=[0,0];
+   
+    for(var i=0;i<nums.length;i++){
+      for(var j=0;j<nums.length-1;j++){
+        if(nums[i]+nums[j]==target){
+          temp=[i,j];
+        }else{
+          for(var k=1;k<nums.length;k++){
+              if(nums[i]+nums[k]==target){
+          temp=[i,k];
+        }
+          }
+        }
+      }
+    }
+     return temp;
+  }
+}
+
 */
 
 import 'dart:io';
